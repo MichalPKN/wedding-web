@@ -1,0 +1,8 @@
+# ignore everything (dirs, files, sub-dirs, sub-files)
+/*
+/wp-content/wpvividbackups
+# but do not ignore the this files and folders
+!.gitignore
+!/resources
+/resources/node_modules
+!/wp-content/themes/custom*
