@@ -1,0 +1,23 @@
+.c-footer {
+    height: 40vh;
+
+    background: #023D49;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__headline {
+        font-family: "DMSans Regular";
+        font-size: 3vw;
+        line-height: 166%;
+        color: #FFFFFF;
+
+        @include mobileMax952p {
+            font-size: 48px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.c-test-section {
+    height: 100vh;
+
+    background: #F3F9FA;
+    border: 1px solid #FFFFFF;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__headline {
+        font-family: "DMSans Regular";
+        font-size: 3vw;
+        line-height: 166%;
+        color: #023D49;
+
+        @include mobileMax952p {
+            font-size: 64px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.c-hero {
+    height: 100vh;
+    background: #F3F9FA;
+    border: 1px solid #023D49;
+    .container {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: calc(var(--container-padding) + 10vh);
+        padding-bottom: var(--container-padding);
+    }
+    &__logo {
+        display: block;
+        height: 100%;
+        width: auto;
+    }
+    &__headline {
+        font-family: "DMSans Regular";
+        font-size: 4vw;
+        line-height: 125%;
+        color: #023D49;
+        color: green;
+        @include mobileMax952p {
+            font-size: 64px;
+        }
+    }
+}
