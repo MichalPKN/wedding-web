@@ -1,3 +1,5 @@
+$bg-color: #6B8978;
+
 $smashed-pumpkin: #FF6A39;
 $feldgrau: #485956;
 $raisin-black: #222223;
@@ -11,5 +13,5 @@ $transparent: transparent;
 $black: #000000;
 
 :root {
-    --primary-bg-color: #{$white}; // sets page background on body and root
+    --primary-bg-color: #{$bg-color}; // sets page background on body and root
 }

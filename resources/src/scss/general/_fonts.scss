@@ -1,4 +1,25 @@
 @font-face {
+    font-family: 'SF NS Rounded';
+    src: url('fonts/sf-ns-rounded.ttf');
+}
+
+@mixin sfns{
+    font-family: 'SF NS Rounded';
+    color: $white;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 276;
+    line-height: 36px; /* 150% */
+    text-transform: uppercase;
+
+    @include mobileMax952p {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
+@font-face {
     font-family: 'Be Vietnam Pro';
     src: url('fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
     font-display: swap;

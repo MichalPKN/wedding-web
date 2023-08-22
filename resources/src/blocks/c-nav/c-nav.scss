@@ -2,26 +2,31 @@
     position: fixed;
     top: 0;
     z-index: 1000;
-    height: 10vh;
-
-    background: #FFFFFF;
-    border-bottom: 1px solid #023D49;
+    height: 100vh;
+    width: 104px;
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
 
     .container {
         height: 100%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
+        padding: 44px 0 64px 0;
     }
 
-    &__headline {
-        font-family: "DMSans Regular";
-        font-size: 2vw;
-        line-height: 125%;
-        color: #023D49;
+    &__scroll {
+        @include sfns;
+        font-size: 14px;
+        font-weight: 276;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
 
-        @include mobileMax952p {
-            font-size: 32px;
+        &__text {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
         }
     }
 }
