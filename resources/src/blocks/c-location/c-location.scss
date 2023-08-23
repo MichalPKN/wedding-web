@@ -15,8 +15,20 @@
 
     &__headline {
         @include BodoniModa;
-        margin-bottom: 64px;
+        margin-bottom: 64px + 18px;
         font-size: 200px;
+        line-height: 220px;
+
+        @include windowMax1280p {
+            margin-bottom: 58px;
+            font-size: px_to_vw_tablet(128);
+            line-height: px_to_vw_tablet(142);
+        }
+
+        @include mobileMax952p {
+            font-size: px_to_vw_mobile(64);
+            line-height: px_to_vw_mobile(64);
+        }
     }
 
     &__button {

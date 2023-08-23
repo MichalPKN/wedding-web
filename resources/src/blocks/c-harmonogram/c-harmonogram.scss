@@ -7,9 +7,10 @@
         position: absolute;
         @include BodoniModa;
         left: 50%;
-        top: 317px - 120px + 110px;
+        top: 317px - 120px + 110px + 10px;
         transform: translate(-50%);
         opacity: 0.05;
+        padding-left: px_to_vw_desktop(24);
     }
 
     &__time {
@@ -17,11 +18,22 @@
         margin-top: 200px;
         font-size: 160px;
         line-height: 188px;
+        margin-bottom: 32px;
+
+        @include mobileMax952p {
+            margin-top: 120px;
+            font-size: 64px;
+            line-height: 72px;
+        }
     }
 
     &__text {
         @include sfns;
-        margin-top: 32px;
+
+        @include mobileMax952p {
+            font-size: 20px;
+            line-height: 32px;
+        }
     }
 
     &__footer {
@@ -30,6 +42,13 @@
         opacity: 0.5;
         font-size: 18px;
         font-weight: 276;
+
+        @include mobileMax952p {
+            margin-top: 141px;
+            font-size: 16px;
+            font-weight: 276;
+            line-height: 22px;
+        }
     }
 
 }
