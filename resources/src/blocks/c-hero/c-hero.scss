@@ -1,22 +1,37 @@
 .c-hero {
     height: 100vh;
-    .container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /*.container {
         position: relative;
-        text-align: center;
-        padding-top: calc(var(--container-padding) + 10vh);
-        padding-bottom: var(--container-padding);
-    }
+        overflow: visible
+    }*/
+
     &__headline {
         width: 100%;
+        max-width: 1196px;
+        height: auto;
     }
-    &__headline {
-        font-family: "DMSans Regular";
-        font-size: 4vw;
-        line-height: 125%;
-        color: #023D49;
-        color: green;
-        @include mobileMax952p {
-            font-size: 64px;
-        }
+
+    &__date {
+        @include sfns;
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+
+    &__photo1 {
+        position: absolute;
+        z-index: -1;
+        left: 219px; // 226px, convert to vh maybe
+        top: 150px; // 218px 
+        
+    }
+    &__photo2 {
+        position: absolute;
+        z-index: -1;
+        right: 164px; // 164px
+        top: 415px; // 415px
     }
 }
