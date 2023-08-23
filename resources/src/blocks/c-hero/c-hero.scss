@@ -9,6 +9,15 @@
         overflow: visible
     }*/
 
+    &__title {
+        @include sfns;
+        font-size: 18px;
+        line-height: 24px;
+        position: absolute;
+        top: 48px;
+        right: 64px;
+    }
+
     &__headline {
         width: 100%;
         max-width: 1196px;
