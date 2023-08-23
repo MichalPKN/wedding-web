@@ -1,14 +1,27 @@
 .c-location {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('images/bg/kmin_photo.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .container {
+        overflow: visible;
+    }
 
     &__headline {
-        font-family: "DMSans Regular";
-        font-size: 3vw;
-        line-height: 166%;
-        color: #023D49;
+        @include BodoniModa;
+        margin-bottom: 64px;
+    }
 
-        @include mobileMax952p {
-            font-size: 64px;
-        }
+    &__button {
+        @include sfns;
+        border-radius: 32px;
+        border: 1px solid $white;
+        padding: 18px 32px;
     }
 }

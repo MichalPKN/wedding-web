@@ -20,6 +20,28 @@
 }
 
 @font-face {
+    font-family: 'Bodoni Moda';
+    src: url('fonts/BodoniModa-VariableFont_opsz,wght.ttf');
+}
+
+@mixin BodoniModa{
+    font-family: 'Bodoni Moda';
+    color: $white;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 220px;
+    text-transform: uppercase;
+
+    @include mobileMax952p {
+        font-size: 64px;
+        line-height: 72px;
+    }
+}
+
+
+@font-face {
     font-family: 'Be Vietnam Pro';
     src: url('fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
     font-display: swap;
