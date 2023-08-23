@@ -1,0 +1,35 @@
+.c-harmonogram {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    text-align: center;
+
+    &__title {
+        position: absolute;
+        @include BodoniModa;
+        left: 50%;
+        top: 317px - 120px + 110px;
+        transform: translate(-50%);
+        opacity: 0.05;
+    }
+
+    &__time {
+        @include BodoniModa;
+        margin-top: 200px;
+        font-size: 160px;
+        line-height: 188px;
+    }
+
+    &__text {
+        @include sfns;
+        margin-top: 32px;
+    }
+
+    &__footer {
+        @include sfns;
+        margin-top: 296px;
+        opacity: 0.5;
+        font-size: 18px;
+        font-weight: 276;
+    }
+
+}
