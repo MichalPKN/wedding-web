@@ -1,18 +1,20 @@
 .c-hero {
     height: 100vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
 
-    /*.container {
-        position: relative;
-        overflow: visible
-    }*/
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        @include mobileMax952p {
+            padding-bottom: 100px;
+        }
+    }
 
     &__title {
-        @include sfns;
-        font-size: 18px;
-        line-height: 24px;
+        @include sfns2;
         position: absolute;
         top: 48px;
         right: 64px;
@@ -24,51 +26,56 @@
     }
 
     &__headline {
-        width: 100%;
-        max-width: 1196px;
+        width: px_to_vw_desktop(1196);
         height: auto;
+
+        @include mobileMax952p {
+            width: 100%
+        }
     }
 
     &__date {
         @include sfns;
-        padding-top: 40px;
+        padding-top: px_to_vh_desktop(40);
         padding-bottom: 24px;
+    }
+
+    &__leaves {
+        @include sfns;
+        
     }
 
     &__photo1 {
         position: absolute;
         z-index: -1;
+        width: px_to_vw_desktop(314);
+        height: px_to_vw_desktop(370);
         left: px_to_vw_desktop(219); // 226px, convert to vh maybe
         top: px_to_vh_desktop(150); // 218px 
 
-        @include windowMax1280p {
-            width: 256px;
-            left: px_to_vw_tablet(50);
-        }
         @include mobileMax952p {
-            width: 256px;
+            width: 177px;
+            height: 209px;
             left: px_to_vw_tablet(50);
         }
 
         @include mobileMax768p {
             left: -25px;
             top: 104px;
-            width: 177px;
         }
         
     }
     &__photo2 {
         position: absolute;
         z-index: -1;
+        width: px_to_vw_desktop(424);
+        height: px_to_vw_desktop(500);
         right: px_to_vw_desktop(140); // 164px
         bottom: px_to_vh_desktop(140); // 189px
 
-        @include windowMax1280p {
-            width: 340px; 
-            right: px_to_vw_tablet(20);
-        }
         @include mobileMax952p {
-            width: 340px; 
+            width: 240px;
+            height: 284px;  
             right: px_to_vw_tablet(20);
         }
 

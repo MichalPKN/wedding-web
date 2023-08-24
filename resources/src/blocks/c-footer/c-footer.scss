@@ -1,23 +1,16 @@
 .c-footer {
-    height: 40vh;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
-    background: #023D49;
-
-    .container {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @include mobileMax952p {
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 
-    &__headline {
-        font-family: "DMSans Regular";
-        font-size: 3vw;
-        line-height: 166%;
-        color: #FFFFFF;
-
-        @include mobileMax952p {
-            font-size: 48px;
-        }
+    &__text {
+        @include sfns2Responsive;;
+        opacity: 0.5;
+        font-weight: 276;
     }
 }
