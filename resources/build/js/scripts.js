@@ -192,8 +192,57 @@ appHeight()
 //     // custom cleanup code here (runs when it STOPS matching)
 //     };
 // });
+if (document.querySelector(".c-harmonogram")) {
+    window.addEventListener('load', () => {
+        gsap.from(".c-harmonogram__title", {
+            scrollTrigger: {
+                trigger: ".c-harmonogram__title",
+                start: "center center",
+                pin: true,
+                end: "max"
+            },
+        });
+    })
+}
 if (document.querySelector(".c-hero")) {
-    let headline = document.querySelector(".c-hero__headline")
+    window.addEventListener('load', () => {
+        document.querySelector(".c-hero .container").classList.remove('--loader-prepare');
+        let tl = gsap.timeline();
+        tl.from(".c-hero__headline", {y:300, opacity:0, ease: "power2.out", duration:1.3}, "hlfirst");
+        tl.from(".c-hero__date", {y:50, opacity:0, ease: "power2.out", duration:1.1}, "<1");
+        tl.from(".c-hero__leaves", {y:50, opacity:0, ease: "power2.out", duration:1.1}, "<");
+        tl.from(".c-hero__photo1", {y:250, opacity:0, ease: "power2.out", duration:1.1}, "<");
+        tl.from(".c-hero__photo2", {y:250, opacity:0, ease: "power2.out", duration:1.1}, "<");
+        tl.from(".c-hero__title", {x:300, ease: "power2.out", duration:1.1}, "<");
+    })
+}
+if (document.querySelector(".c-location")) {
+    window.addEventListener('load', () => {
+        gsap.from(".c-location__backg", {
+            scrollTrigger: {
+                trigger: ".c-location",
+                scrub: 0.2,
+                end: "bottom bottom"
+            },
+            scaleX:0, scaleY:0
+        });
+        gsap.from(".c-location .container", {
+            scrollTrigger: {
+                trigger: ".c-location__headline",
+                scrub: 0,
+                end: "+=200", // idk
+                markers: true
+            },
+            y:120, 
+            ease: "power1.out"
+        });
+    })
+}
+if (document.querySelector(".c-nav")) {
+    window.addEventListener('load', () => {
+        document.querySelector(".c-nav").classList.remove('--loader-prepare');
+        gsap.from(".c-nav", {x:-120, opacity:0, ease: "power2.out", duration:1.3, delay:1});
+    })
 }
 // obtain plugin
 var cc = initCookieConsent();

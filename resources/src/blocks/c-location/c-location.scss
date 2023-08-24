@@ -1,16 +1,22 @@
 .c-location {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url('images/bg/kmin_photo.webp');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    
+    &__backg {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     .container {
+        height: 100%;
         overflow: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
     }
 
     &__headline {
