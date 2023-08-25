@@ -36,5 +36,12 @@
         border-radius: 1.777778em;
         border: 1px solid $white;
         padding: 1em 1.777778em;
+        transition: 0.15s;
+
+        &:hover {
+            color: #5A595B;
+            background-color: $white;
+        }
+
     }
 }

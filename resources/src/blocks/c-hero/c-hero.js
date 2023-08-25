@@ -7,6 +7,10 @@ if (document.querySelector(".c-hero")) {
         tl.from(".c-hero__leaves", {y:50, opacity:0, ease: "power2.out", duration:1.1}, "<");
         tl.from(".c-hero__photo1", {y:250, opacity:0, ease: "power2.out", duration:1.1}, "<");
         tl.from(".c-hero__photo2", {y:250, opacity:0, ease: "power2.out", duration:1.1}, "<");
-        tl.from(".c-hero__title", {x:300, ease: "power2.out", duration:1.1}, "<");
+        if(window.innerWidth <= 952){
+            tl.from(".c-hero__title", {y:-100, ease: "power2.out", duration:1.1}, "<");
+        }else{
+            tl.from(".c-hero__title", {x:250, ease: "power2.out", duration:1.1}, "<");
+        }
     })
 }

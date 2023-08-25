@@ -1,5 +1,6 @@
 if (document.querySelector(".c-location")) {
     window.addEventListener('load', () => {
+
         gsap.from(".c-location__backg", {
             scrollTrigger: {
                 trigger: ".c-location",
@@ -12,10 +13,10 @@ if (document.querySelector(".c-location")) {
             scrollTrigger: {
                 trigger: ".c-location__headline",
                 scrub: 0,
-                end: "+=200", // idk
+                end: "+=200", // ?
                 markers: true
             },
-            y:120, 
+            y: "15vh", 
             ease: "power1.out"
         });
     })
