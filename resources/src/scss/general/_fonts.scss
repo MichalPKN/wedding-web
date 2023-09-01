@@ -63,6 +63,17 @@
     }
 }
 
+@mixin sfns3{
+    font-family: 'SF NS Rounded';
+    color: $white;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 276;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
 @font-face {
     font-family: 'Bodoni Moda';
     src: url('fonts/BodoniModa-VariableFont_opsz,wght.ttf');

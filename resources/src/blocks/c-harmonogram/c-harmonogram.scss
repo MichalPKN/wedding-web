@@ -3,6 +3,10 @@
     padding-bottom: 260px;
     text-align: center;
 
+    @include mobileMax952p {
+        padding-bottom: 109px;
+    }
+
     &__title {
         position: absolute;
         @include BodoniModa;

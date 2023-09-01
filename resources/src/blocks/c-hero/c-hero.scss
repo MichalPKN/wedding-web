@@ -18,10 +18,15 @@
         position: absolute;
         top: 48px;
         right: 64px;
+        --x-offset: 0;
+        --y-offset: 0%;
+
+        transform: translate(calc(0% + var(--x-offset)));
+
         @include mobileMax952p {
             top: 40px;
             right: 50%;
-            transform: translate(50%);
+            transform: translate(50%, calc(0% + var(--y-offset)));
         }
     }
 

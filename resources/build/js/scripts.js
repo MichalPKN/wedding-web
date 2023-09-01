@@ -193,54 +193,62 @@ appHeight()
 //     };
 // });
 if (document.querySelector(".c-harmonogram")) {
-    window.addEventListener('load', () => {
-        gsap.from(".c-harmonogram__title", {
-            scrollTrigger: {
-                trigger: ".c-harmonogram__title",
-                start: "center center",
-                pin: true,
-                end: "max"
-            },
-        });
+    gsap.from(".c-harmonogram__title", {
+        scrollTrigger: {
+            trigger: ".c-harmonogram__title",
+            start: "center center",
+            pin: true,
+            end: "max"
+        },
     })
+
+    let mm = gsap.matchMedia();
+    mm.add({
+        isDesktop: `(min-width: 953px)`,
+        isMobile: `(max-width: 952px)`,
+    }, (context) => {
+        let { isDesktop, isMobile } = context.conditions;
+        if (isDesktop) {
+            gsap.from(".c-harmonogram__timesWrapper", {
+                y: "15vw",
+                ease: "power1.in",
+                scrollTrigger: {
+                    trigger: ".c-harmonogram__title",
+                    start: "center 90%",
+                    end: "center center",
+                    scrub: 0.2,
+                }
+            })
+        }
+
+    })
+
 }
 if (document.querySelector(".c-hero")) {
     window.addEventListener('load', () => {
         document.querySelector(".c-hero .container").classList.remove('--loader-prepare');
         let tl = gsap.timeline();
-        tl.from(".c-hero__headline", {y:300, opacity:0, ease: "power2.out", duration:1.3}, "hlfirst");
-        tl.from(".c-hero__date", {y:50, opacity:0, ease: "power2.out", duration:1.1}, "<1");
-        tl.from(".c-hero__leaves", {y:50, opacity:0, ease: "power2.out", duration:1.1}, "<");
-        tl.from(".c-hero__photo1", {y:250, opacity:0, ease: "power2.out", duration:1.1}, "<");
-        tl.from(".c-hero__photo2", {y:250, opacity:0, ease: "power2.out", duration:1.1}, "<");
-        if(window.innerWidth <= 952){
-            tl.from(".c-hero__title", {y:-100, ease: "power2.out", duration:1.1}, "<");
+        tl.from(".c-hero__headline", {y: window.innerWidth > 952 ? 200/1920*100 + "vw" : 100, opacity:0, ease: "power2.out", duration:1.4});
+        tl.from(".c-hero__date", {y:window.innerWidth > 952 ? 50/1920*100 + "vw" : 30, opacity:0, ease: "power2.out", duration:1.3}, "<1.1");
+        tl.from(".c-hero__leaves", {y:window.innerWidth > 952 ? 50/1920*100 + "vw" : 30, opacity:0, ease: "power2.out", duration:1.3}, "<");
+        tl.from(".c-hero__photo1", {y:window.innerWidth > 952 ? 200/1920*100 + "vw" : 100, opacity:0, ease: "power2.out", duration:1.3}, "<");
+        tl.from(".c-hero__photo2", {y:window.innerWidth > 952 ? 200/1920*100 + "vw" : 100, opacity:0, ease: "power2.out", duration:1.3}, "<");
+        if(window.innerWidth < 953) {
+            tl.from(".c-hero__title", {"--y-offset":"-310%", ease: "power2.out", duration:1.3}, "<");
         }else{
-            tl.from(".c-hero__title", {x:250, ease: "power2.out", duration:1.1}, "<");
+            tl.from(".c-hero__title", {"--x-offset":"165%", ease: "power2.out", duration:1.3}, "<");
         }
     })
 }
 if (document.querySelector(".c-location")) {
-    window.addEventListener('load', () => {
-
-        gsap.from(".c-location__backg", {
-            scrollTrigger: {
-                trigger: ".c-location",
-                scrub: 0.2,
-                end: "bottom bottom"
-            },
-            scaleX:0, scaleY:0
-        });
-        gsap.from(".c-location .container", {
-            scrollTrigger: {
-                trigger: ".c-location__headline",
-                scrub: 0,
-                end: "+=200", // ?
-                markers: true
-            },
-            y: "15vh", 
-            ease: "power1.out"
-        });
+    gsap.from(".c-location__backg", {
+        scrollTrigger: {
+            trigger: ".c-location",
+            scrub: 0.2,
+            start: "40% bottom",
+            end: "bottom bottom"
+        },
+        scale:0
     })
 }
 if (document.querySelector(".c-nav")) {
