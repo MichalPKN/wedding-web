@@ -50,17 +50,14 @@
         
     }
 
-    &__photo1 {
+    &__imgWrap1 {
         position: absolute;
-        z-index: -1;
-        width: px_to_vw_desktop(314);
-        height: px_to_vw_desktop(370);
+        width: auto;
+        height: auto;
         left: px_to_vw_desktop(219); // 226px, convert to vh maybe
         top: px_to_vh_desktop(150); // 218px 
 
         @include mobileMax952p {
-            width: 177px;
-            height: 209px;
             left: px_to_vw_tablet(50);
         }
 
@@ -68,26 +65,45 @@
             left: -25px;
             top: 104px;
         }
-        
     }
-    &__photo2 {
+
+    &__imgWrap2 {
         position: absolute;
-        z-index: -1;
-        width: px_to_vw_desktop(424);
-        height: px_to_vw_desktop(500);
+        width: auto;
+        height: auto;
         right: px_to_vw_desktop(140); // 164px
         bottom: px_to_vh_desktop(140); // 189px
 
         @include mobileMax952p {
-            width: 240px;
-            height: 284px;  
             right: px_to_vw_tablet(20);
         }
 
         @include mobileMax768p {
             right: -62px;
             bottom: 90px;
+        }
+
+    }
+
+    &__photo1 {
+        z-index: -1;
+        width: px_to_vw_desktop(314);
+        height: px_to_vw_desktop(370);
+
+        @include mobileMax952p {
+            width: 177px;
+            height: 209px;
+        }
+        
+    }
+    &__photo2 {
+        z-index: -1;
+        width: px_to_vw_desktop(424);
+        height: px_to_vw_desktop(500);
+
+        @include mobileMax952p {
             width: 240px;
+            height: 284px;  
         }
     }
 }
